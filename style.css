@@ -9,12 +9,63 @@
 body {
     background-color: var(--light);
 }
+.card-container {
+    display: flex; /* or inline-flex */
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+  } 
 
 .card {
     padding: 10px;
     margin: 10px;
+    /* border: 1px solid black; */
+}
+
+.content {
+    font-size: 1.5rem; 
+}
+
+h1 {
+    font-size: 2.25rem;
+}
+
+p {
+    font-size: .75rem;
 }
 
 img {
     width: 250px;
 }
+
+
+@media (max-width: 767px) {
+    .hidden-mobile {
+      display: none;
+    }
+  }
+
+@media screen and (min-width: 700px) {
+	html {
+		font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+	html {
+		font-size: 2rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        background-color: var(--dark);
+        color: white;
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    :root {
+        background-color: var(--light);
+        color: black;
+    }
+  }
